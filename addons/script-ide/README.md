@@ -6,8 +6,7 @@ This includes the following changes:
 - Scripts are now shown as Tabs inside a TabContainer (No Script List)
 - The Outline is on the right side (can be changed to be on the left side again)
 - The Outline got an overhaul and shows more than just the methods of the script. It includes the following types with a unique icon:
-	- Classes (Red Square)
-	- Constants (Red with a C)
+	- Classes (Red Square)ssss
 	- Signals (Yellow)
 	- Export variables (Orange)
 	- Variables (Red)
