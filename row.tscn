@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://d08lqlj25cu3b"]
+
+[ext_resource type="Script" path="res://Row.gd" id="1_oh4n0"]
+[ext_resource type="PackedScene" uid="uid://bb0wuu17x674k" path="res://grid_cell.tscn" id="2_avnmi"]
+
+[node name="Row" type="Node2D"]
+script = ExtResource("1_oh4n0")
+
+[node name="GridCell" parent="." instance=ExtResource("2_avnmi")]
+
+[node name="GridCell1" parent="." instance=ExtResource("2_avnmi")]
+offset_left = 42.0
+offset_right = 82.0
+cell_column = 1
+
+[node name="GridCell2" parent="." instance=ExtResource("2_avnmi")]
+offset_left = 84.0
+offset_right = 124.0
+cell_column = 2
+
+[node name="GridCell3" parent="." instance=ExtResource("2_avnmi")]
+offset_left = 126.0
+offset_right = 166.0
+cell_column = 3
+
+[connection signal="cell_selected" from="GridCell" to="." method="_on_grid_cell_cell_selected"]
+[connection signal="cell_selected" from="GridCell1" to="." method="_on_grid_cell_cell_selected"]
+[connection signal="cell_selected" from="GridCell2" to="." method="_on_grid_cell_cell_selected"]
+[connection signal="cell_selected" from="GridCell3" to="." method="_on_grid_cell_cell_selected"]

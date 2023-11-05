@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://c744yy8ns2bxl"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_mp2a8"]
+[ext_resource type="PackedScene" uid="uid://d08lqlj25cu3b" path="res://row.tscn" id="2_2q7g4"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_mp2a8")
+
+[node name="Row0" parent="." instance=ExtResource("2_2q7g4")]
+
+[node name="Row1" parent="." instance=ExtResource("2_2q7g4")]
+position = Vector2(0, 42)
+row = 1
+
+[node name="Row2" parent="." instance=ExtResource("2_2q7g4")]
+position = Vector2(0, 84)
+row = 2
+
+[node name="Row3" parent="." instance=ExtResource("2_2q7g4")]
+position = Vector2(0, 126)
+row = 3
+
+[connection signal="cell_selected" from="Row0" to="." method="_on_row_cell_selected"]
+[connection signal="cell_selected" from="Row1" to="." method="_on_row_cell_selected"]
+[connection signal="cell_selected" from="Row2" to="." method="_on_row_cell_selected"]
+[connection signal="cell_selected" from="Row3" to="." method="_on_row_cell_selected"]

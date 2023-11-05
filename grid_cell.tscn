@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb0wuu17x674k"]
+
+[ext_resource type="Script" path="res://GridCell.gd" id="1_jy38c"]
+
+[node name="GridCell" type="ColorRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_jy38c")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
